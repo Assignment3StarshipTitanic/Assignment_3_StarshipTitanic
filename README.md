@@ -20,9 +20,9 @@ This is a group assignment where we will participate in a mock Kaggle Challenge.
 
 ## Submission
 
-- Final presentation slides are uploaded on Canvas.
-- Kaggle submission screenshots are included in the presentation.
-- A copy of the final Colab notebook is saved in this repository.
+- Need to Final presentation slides are uploaded on Canvas.
+- Need to  submit Kaggle submission screenshots are included in the presentation.
+-  Need to submit a copy of the final Colab notebook is saved in this repository.
 
 ## Links
 
