@@ -27,6 +27,6 @@ This is a group assignment where we will participate in a mock Kaggle Challenge.
 ## Links
 
 - GitHub Repo: https://github.com/Assignment3StarshipTitanic/Assignment_3_StarshipTitanic
-- Colab Notebook: https://colab.research.google.com/github/Assignment3StarshipTitanic/Assignment_3_StarshipTitanic/blob/main/EDA.ipynb
+- Colab Notebook: https://colab.research.google.com/github/Assignment3StarshipTitanic/Assignment_3_StarshipTitanic/blob/main/Starship_Group_11.ipynb
 - Kaggle Challenge: https://www.kaggle.com/competitions/spaceship-titanic
 
