@@ -1,0 +1,12 @@
+Objective:
+
+The goal of this step is to identify the most suitable machine learning models for predicting wheather a passenger was transported on the spaceship titanic.
+The model had to balance accuracy, interpretability, training speed, and generalization.
+
+Models under consideration:
+
+Logistic regression -
+XGBoost - 
+Random Forest - 
+CatBoost - 
+SVM -
