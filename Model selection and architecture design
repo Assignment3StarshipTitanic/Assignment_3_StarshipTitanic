@@ -5,8 +5,10 @@ The model had to balance accuracy, interpretability, training speed, and general
 
 Models under consideration:
 
-Logistic regression -
-XGBoost - 
-Random Forest - 
-CatBoost - 
-SVM -
+Logistic regression - Simple, interpretable, and fast to train, may not be suitable or underperform for non-linear data.
+XGBoost             - Complex, requires more tuning, can handle missing values, and shows complex interactions between data.
+Random Forest       - Can handle non-linearity, large model size, less interpretable.
+CatBoost            - Can handle Categorical features, longer training time.
+SVM                 - Explored briefly, not ideal due to scale and interpretability issues.
+
+Final model choices:
