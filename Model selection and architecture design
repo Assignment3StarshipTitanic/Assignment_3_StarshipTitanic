@@ -12,3 +12,30 @@ CatBoost            - Can handle Categorical features, longer training time.
 SVM                 - Explored briefly, not ideal due to scale and interpretability issues.
 
 Final model choices:
+
+We selected two models based on experimentation and evaluation:
+Logistic regression (Logistic regression)
+XGBoost Classifier (Primary model with grid search and tuning)
+These two models are later used for an ensemble prediction to improve performance and reduce the bias-variance trade-off.
+
+Design:
+
+Feature engineering by model selection -
+Features like Totalspend, GroupSize, and Deck introduced non-linear patterns, which guided us towards tree-based models(XGBoost, Random forest)
+
+Data Characteristic- 
+The data included:
+- Mixed categories (Categorical and numeric)
+- It has missing values
+- Imbalanced use of ship services
+Tree-based models handle these characteristics well.
+
+Explanability:
+- Logistic regression was retained because of its simplicity and explainability - useful for comparision and SHAP value interpretation.
+
+we did not use any deep learning models and used SHAP due to the considerable resource limitation on google colab
+
+
+
+
+
