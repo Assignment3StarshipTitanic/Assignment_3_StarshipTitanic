@@ -14,14 +14,10 @@ SVM                 - Explored briefly, not ideal due to scale and interpretabil
 Final model choices:
 
 We selected two models based on experimentation and evaluation:
-Logistic regression (Logistic regression)
-XGBoost Classifier (Primary model with grid search and tuning)
+
 These two models are later used for an ensemble prediction to improve performance and reduce the bias-variance trade-off.
 
 Design:
-
-Feature engineering by model selection -
-Features like Totalspend, GroupSize, and Deck introduced non-linear patterns, which guided us towards tree-based models(XGBoost, Random forest)
 
 Data Characteristic- 
 The data included:
@@ -30,8 +26,29 @@ The data included:
 - Imbalanced use of ship services
 Tree-based models handle these characteristics well.
 
-Explanability:
-- Logistic regression was retained because of its simplicity and explainability - useful for comparision and SHAP value interpretation.
+We selected a Voting Ensemble combining:
+- CatBoostClassifier: Strong with categorical data and requires minimal encoding.
+- LightGBMClassifier: Extremely efficient, robust, and interpretable with SHAP.
+This voting approach leverages the strengths of both models and offers improved generalization, mitigating overfitting by reducing model variance.
+
+Feature engineering by model selection :
+
+- Features like Totalspend, GroupSize, and Deck introduced non-linear patterns, which guided us towards tree-based models(CatBoost, LightGBM)
+- Transformed Cabin into structured components (Deck, Side, CabinNum) and filled missing values with defaults.
+- Binned continuous Age into categorical AgeGroup for interaction modeling.
+- Applied log transformation (LogSpend) to reduce skewness in expenditure features.
+
+Preprocessing Pipeline:
+
+- Imputation: Used median or 0 for numerical columns; default strings/booleans for categorical.
+- Label Encoding for tree model compatibility (CatBoost and LGBM supports this natively).
+- Standardization applied post-feature generation for model compatibility.
+
+Model Training & Evaluation:
+
+- Dataset split using stratified sampling to avoid class imbalance.
+- Performance evaluated using accuracy, confusion matrix, and classification report.
+- Visualized model comparison and SHAP-based explainability for trust and transparency.
 
 we did not use any deep learning models and used SHAP due to the considerable resource limitation on google colab
 
